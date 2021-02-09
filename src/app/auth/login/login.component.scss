@@ -1,0 +1,75 @@
+.container {
+
+  background-image: url("https://www.evapharma.com/wp-content/uploads/2016/10/home01.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  animation: fade 2.5s ease-in-out;
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    max-width: 40vw;
+    margin: auto;
+
+    .form-container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.60);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(6.5px);
+      -webkit-backdrop-filter: blur(6.5px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 4rem;
+
+
+
+      mat-form-field:not(:last-of-type) {
+        margin-bottom: 2.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+        align-self: center;
+        margin-bottom: 1em;
+      }
+
+      .full-width {
+        margin-top: 5em;
+        display: flex;
+        justify-content: space-evenly;
+
+        button {
+          width: 40%;
+          padding: 0.5rem 0rem;
+
+          &[color='primary'] {
+            font-size: 1.4rem;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width:'935px'){
+    .title {
+        font-size: 1rem !important;
+    }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

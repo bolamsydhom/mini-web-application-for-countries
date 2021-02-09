@@ -1,0 +1,28 @@
+<div class="container">
+<form [formGroup]="form" (submit)= "onLogin(form.value)">
+  <div class="form-container" [@divState]>
+    <h2 class='title'> Welcome back 🥰 </h2>
+    <mat-form-field appearance="">
+        <mat-label>Email</mat-label>
+        <input formControlName="Email" name="Email" matInput placeholder="johnDoe@example.com" required min="12" type="email"/>
+      </mat-form-field>
+
+    <mat-form-field appearance="">
+      <mat-label>Enter your password</mat-label>
+      <input formControlName="Password" matInput name="Password" [type]="hide ? 'password' : 'text'" required />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+  
+
+    <div class="full-width">
+      <button mat-stroked-button type="reset">Cancel</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]='form.invalid'>Login</button>
+    </div>
+  </div>
+</form>
+</div>
+<app-spinner *ngIf='startSpinning'></app-spinner>

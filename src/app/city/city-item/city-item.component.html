@@ -1,0 +1,22 @@
+<div class="city-card" >
+    <div class="card-image">
+        <h1>{{city.name[0]}}</h1>
+    </div>
+    <span class="card-title">
+      {{city.name}}
+    </span>
+    <div class="crud">
+      <button mat-stroked-button color="primary" [routerLink]="['/city','edit',city.id, city.countryId]">
+  
+        <mat-icon>create</mat-icon>
+  
+      </button>
+  
+      <button mat-stroked-button color="warn" (click)="openDialog()">
+  
+          <mat-icon>delete</mat-icon>
+    
+        </button>
+    </div>
+  </div>
+  

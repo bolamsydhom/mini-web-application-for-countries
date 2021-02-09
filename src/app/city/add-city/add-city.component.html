@@ -1,0 +1,23 @@
+<div class="container">
+
+    <mat-form-field *ngIf="editMode" appearance="fill">
+        <mat-label>Countries</mat-label>
+        <mat-select [(value)]="city.countryId">
+          <mat-option *ngFor="let country of countries" [value]="country.id">
+            {{country.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="flat">
+        <mat-label>City Name</mat-label>
+        <input matInput type="text" [(ngModel)]="city.name">
+        <button mat-button *ngIf="city.name" matSuffix mat-icon-button aria-label="Clear" (click)="country.name=''">
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onAddCity()" [disabled]="city.name == ''">{{editMode ? 'Update' : 'Add'}}</button>
+</div>
+
+
+<app-spinner *ngIf='startSpinner'></app-spinner>

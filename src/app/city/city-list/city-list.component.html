@@ -1,0 +1,17 @@
+<!-- <div class="title-container">
+    <h1>Cities in {{country.name}}</h1>
+</div> -->
+
+<app-navbar [title]="title" [url]="'/country'"></app-navbar>
+
+
+<div class="list">
+    <app-city-item *ngFor='let city of cities' [city]='city'></app-city-item>
+  </div>
+  
+  
+  <div class="add-button">
+      <button mat-fab color="primary" aria-label="add item" [routerLink]="cityByCountryId? ['/city','add', countryId]: ['/city','add']">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>

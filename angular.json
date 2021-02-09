@@ -65,7 +65,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hiring-task:build"
+            "browserTarget": "hiring-task:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "hiring-task"
+  "defaultProject": "hiring-task",
+  "cli": {
+    "analytics": false
+  }
 }

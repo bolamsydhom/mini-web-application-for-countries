@@ -1,0 +1,25 @@
+<div id="Card" class="card" >
+
+
+  <div class="card-image" [routerLink]="['/city','country',country.id]">
+      <h1>{{country.name[0]}}</h1>
+  </div>
+  <span class="card-title">
+    {{country.name}}
+  </span>
+  
+
+  <div class="crud">
+    <button mat-stroked-button color="accent" [routerLink]="['/country','edit',country.id]">
+
+      <mat-icon>create</mat-icon>
+
+    </button>
+
+    <button mat-stroked-button color="warn" (click)="openDialog()">
+
+        <mat-icon>delete</mat-icon>
+  
+      </button>
+  </div>
+</div>

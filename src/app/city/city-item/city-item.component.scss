@@ -1,0 +1,107 @@
+.city-card {
+    position: relative;
+    width: 227px;
+    height: 284px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+  
+    cursor: pointer;
+  
+    .card-image {
+      background: rgb(9, 92, 131);
+      background: linear-gradient(27deg, rgba(9, 92, 131, 1) 0%, rgba(9, 90, 131, 1) 35%, rgb(71, 167, 211) 100%);
+      width: 188px;
+      height: 171px;
+      border-radius: 10px;
+      margin: 18px;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      h1 {
+        margin: auto;
+        font-size: 5rem;
+        transition: transform 0.5s ease-in-out;
+        color: rgba(255, 255, 255, 0.815);
+  
+      }
+    }
+  
+    .card-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #063776;
+      align-self: center;
+    }
+  
+    .crud {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+  
+      button {
+        flex: 1;
+        transition: all 0.25s ease-in-out;
+  
+        &:first-of-type {
+          border-radius: 4px 0px 0px 15px;
+        }
+  
+        &:last-of-type {
+          border-radius: 0px 4px 15px 0px;
+        }
+      }
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+      animation: both;
+      animation: fadingColor2 0.15s ease-in-out both;
+      transition: all 0.25s ease-in-out;
+  
+      .card-image {
+        h1 {
+          transform: rotateY(180deg);
+          transition: transform 0.5s ease-in-out;
+  
+        }
+      }
+      .card-title{
+          color: #ffffff;
+      }
+  
+      .crud {
+        button[color="primary"] {
+          color: rgb(239, 167, 36);
+          transition: all 0.25s ease-in-out;
+  
+        }
+      }
+    }
+  
+  }
+  
+  @keyframes fadingColor2 {
+  
+    from {
+      background: rgba(9, 92, 131, 0.486);
+      background: linear-gradient(27deg, rgba(9, 92, 131, 0.486) 0%, rgba(9, 90, 131, 0.486) 45%, rgba(71, 167, 211, 0.486) 90%);
+    }
+  
+    to {
+      background: rgb(9, 92, 131);
+      background: linear-gradient(27deg, rgba(9, 92, 131, 1) 0%, rgba(9, 90, 131, 1) 35%, rgb(71, 167, 211) 100%);
+    }
+  
+  }
+  

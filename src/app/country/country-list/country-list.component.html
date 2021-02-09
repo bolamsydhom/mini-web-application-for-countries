@@ -1,0 +1,12 @@
+<app-navbar [title]="'Countries'"></app-navbar>
+
+<div class="list">
+  <app-country-item *ngFor='let country of countries' [country]='country'></app-country-item>
+</div>
+
+
+<div class="add-button">
+    <button mat-fab color="primary" aria-label="add item" [routerLink]="['add']">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
